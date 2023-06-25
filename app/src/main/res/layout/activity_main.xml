@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".Fragments.Home"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:queryHint="Thử tìm VietNam"
+        android:iconifiedByDefault="false"
+        android:elevation="5dp"
+        android:background="@drawable/bg_search_view"
+        android:queryBackground="@android:color/transparent" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:menu_fab_label="Choose the type of map"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="70dp"
+        fab:menu_animationDelayPerItem="50"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#FFF"
+        fab:menu_colorPressed="#C1C1C1"
+        fab:menu_colorRipple="#99FFFFFF"
+        fab:menu_fab_size="mini"
+        fab:menu_icon="@drawable/ic_layer"
+        fab:menu_labels_colorNormal="#333333"
+        fab:menu_labels_colorPressed="#444444"
+        fab:menu_labels_colorRipple="#66FFFFFF"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_paddingBottom="4dp"
+        fab:menu_labels_paddingLeft="8dp"
+        fab:menu_labels_paddingRight="8dp"
+        fab:menu_labels_paddingTop="4dp"
+        fab:menu_labels_position="right"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#FFFFFF"
+        fab:menu_labels_textSize="14sp"
+        fab:menu_openDirection="up"
+        fab:menu_labels_showShadow="true"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="1dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="1dp"
+        fab:menu_showShadow="true"
+        >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fbtn_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#FFF"
+            app:fab_label="Normal"
+            app:fab_size="mini"
+            android:src="@drawable/normal_40"
+            android:padding="20dp"
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fbtn_satellite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#FFF"
+            app:fab_label="Satellite"
+            app:fab_size="mini"
+            android:src="@drawable/satellite_40"
+            android:padding="20dp"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fbtn_hybrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#FFF"
+            app:fab_label="Hybrid"
+            app:fab_size="mini"
+            android:src="@drawable/hybrid_40"
+            android:padding="20dp"
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fbtn_terrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#FFF"
+            app:fab_label="Terrain"
+            app:fab_size="mini"
+            android:src="@drawable/terrain_40"
+            android:padding="20dp"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fbtn_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#FFF"
+            app:fab_label="None"
+            app:fab_size="mini"
+            android:src="@drawable/none_40"
+            android:padding="20dp"/>
+    </com.github.clans.fab.FloatingActionMenu>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/draw"
+        android:src="@drawable/ic_draw"
+        app:fabSize="normal"
+        android:backgroundTint="@color/blue"
+        android:tint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/erase"
+        android:src="@drawable/eraser"
+        app:fabSize="normal"
+        android:backgroundTint="@color/blue"
+        android:tint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="10dp" />
+
+</RelativeLayout>
